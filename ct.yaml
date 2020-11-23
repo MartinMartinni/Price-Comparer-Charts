@@ -5,5 +5,5 @@ chart-dirs:
 chart-repos:
   - bitnami=https://charts.bitnami.com/bitnami
   - elasticsearch=https://helm.elastic.co
-#  - consumer=https://martinmartinni.github.io/Price-Comparer-Charts
+  - consumer=https://martinmartinni.github.io/price-comparer-charts
 helm-extra-args: --timeout 600s
