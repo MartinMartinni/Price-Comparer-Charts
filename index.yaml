@@ -1,3 +1,24 @@
 apiVersion: v1
-entries: {}
+entries:
+  consumer:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2020-11-23T01:12:38.794869528Z"
+    dependencies:
+    - name: elasticsearch
+      repository: https://helm.elastic.co
+      version: 7.9.3
+    - name: kafka
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.8.8
+    description: A Helm chart for Price Comparer Consumer
+    digest: 6fe1502001ccffda2e8ae5802c8c784546b0047a1c6db28c9c4d4c37c5a8f898
+    maintainers:
+    - email: email@example.com
+      name: Name
+    name: consumer
+    type: application
+    urls:
+    - https://github.com/MartinMartinni/price-comparer-charts/releases/download/consumer-0.1.0/consumer-0.1.0.tgz
+    version: 0.1.0
 generated: "2020-11-23T02:05:57.039774277+01:00"
