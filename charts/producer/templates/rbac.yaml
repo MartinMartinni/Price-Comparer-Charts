@@ -1,0 +1,21 @@
+kind: Role
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: depends-on-role-producer
+rules:
+  - apiGroups: ["batch", "apps", ""]
+    resources: ["pods", "services", "jobs"]
+    verbs: ["get", "list", "watch"]
+
+---
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: depends-on-role-producer-binding
+subjects:
+  - kind: ServiceAccount
+    name: {{ include "producer.serviceAccountName" . }}
+roleRef:
+  kind: Role
+  name: depends-on-role-producer
+  apiGroup: rbac.authorization.k8s.io
