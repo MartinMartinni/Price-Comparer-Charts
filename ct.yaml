@@ -1,0 +1,9 @@
+# See https://github.com/helm/chart-testing#configuration
+remote: origin
+chart-dirs:
+  - charts
+chart-repos:
+  - bitnami=https://charts.bitnami.com/bitnami
+  - elasticsearch=https://helm.elastic.co
+#  - consumer=https://martinmartinni.github.io/Price-Comparer-Charts
+helm-extra-args: --timeout 600s
