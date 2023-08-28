@@ -32,7 +32,7 @@ spec:
           image: opsfleet/depends-on
           imagePullPolicy: Always
           args:
-            - -service={{ .Release.Name }}-zookeeper
+            - -service={{ .Release.Name }}-schema-registry
             - -service={{ .Release.Name }}-kafka
             - -service=elasticsearch-master
       containers:
@@ -44,8 +44,10 @@ spec:
           env:
             - name: "spring.elasticsearch.rest.uris"
               value: "elasticsearch-master:9200"
-            - name: "kafka.bootstrap.address"
+            - name: "kafka-config.bootstrap-address"
               value: "{{ .Release.Name }}-kafka:9092"
+            - name: "kafka-config.schema-registry-url"
+              value: "http://{{ .Release.Name }}-schema-registry:8081"
           ports:
             - name: http
               containerPort: {{ .Values.service.port }}

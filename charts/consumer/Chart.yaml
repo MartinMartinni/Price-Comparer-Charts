@@ -15,7 +15,7 @@ type: application
 # This is the chart version. This version number should be incremented each time you make changes
 # to the chart and its templates, including the app version.
 # Versions are expected to follow Semantic Versioning (https://semver.org/)
-version: 0.1.0
+version: 1.1.0
 
 # This is the version number of the application being deployed. This version number should be
 # incremented each time you make changes to the application. Versions are not expected to
@@ -28,8 +28,11 @@ maintainers:
 
 dependencies:
   - name: elasticsearch
-    version: 7.9.3
+    version: 7.17.3
     repository: https://helm.elastic.co
   - name: kafka
-    version: 11.8.8
+    version: 25.0.1
+    repository: https://charts.bitnami.com/bitnami
+  - name: schema-registry
+    version: 13.0.5
     repository: https://charts.bitnami.com/bitnami
