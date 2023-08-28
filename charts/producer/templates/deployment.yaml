@@ -41,12 +41,14 @@ spec:
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           env:
-            - name: "kafka.bootstrap.address"
+            - name: "kafka-config.bootstrap-address"
               value: "{{ .Release.Name }}-kafka:9092"
             - name: "spring.jpa.database-platform"
               value: "org.hibernate.dialect.PostgreSQLDialect"
             - name: "spring.datasource.url"
               value: "jdbc:postgresql://{{ .Release.Name }}-postgresql:5432/price_comparer"
+            - name: "kafka-config.schema-registry-url"
+              value: "http://{{ .Release.Name }}-schema-registry:8081"
           ports:
             - name: http
               containerPort: 8080
