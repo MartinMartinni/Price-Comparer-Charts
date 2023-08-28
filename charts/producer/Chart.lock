@@ -1,0 +1,9 @@
+dependencies:
+- name: postgresql
+  repository: https://charts.bitnami.com/bitnami
+  version: 12.9.0
+- name: consumer
+  repository: https://martinmartinni.github.io/price-comparer-charts
+  version: 0.1.0
+digest: sha256:0c9102509fa3f9397d72974bd3f1c5b939db194f2110972e1c5402e1b23a1bbe
+generated: "2023-08-28T18:56:45.4891872+02:00"
