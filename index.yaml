@@ -47,6 +47,26 @@ entries:
   producer:
   - apiVersion: v2
     appVersion: 1.16.0
+    created: "2023-08-28T16:32:42.037200011Z"
+    dependencies:
+    - name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.9.0
+    - name: consumer
+      repository: https://martinmartinni.github.io/price-comparer-charts
+      version: 1.1.0
+    description: A Helm chart for Price Comparer Producer
+    digest: 17b295c3fc639182365938f18ff9933a5dc7e44c416b7588ecf3d1c04a9b992f
+    maintainers:
+    - email: email@example.com
+      name: Name
+    name: producer
+    type: application
+    urls:
+    - https://github.com/MartinMartinni/price-comparer-charts/releases/download/producer-1.1.0/producer-1.1.0.tgz
+    version: 1.1.0
+  - apiVersion: v2
+    appVersion: 1.16.0
     created: "2020-11-23T01:21:48.165312639Z"
     dependencies:
     - name: postgresql
