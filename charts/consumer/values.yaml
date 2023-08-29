@@ -37,13 +37,24 @@ securityContext: {}
 # runAsUser: 1000
 
 service:
-  type: LoadBalancer
+  type: ClusterIP
   # expose port on outside
-  port: 8085
+  port: 8081
   # port for app live inside in the pod's container
-  targetPort: 8085
+  targetPort: 8081
 
-ingress: {}
+ingress:
+  enabled: true
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    kubernetes.io/tls-acme: "true"
+  hosts:
+    - host: "ca1-consumer.172.17.0.2.nip.io"
+      paths: ["/"]
+  tls: []
+  #  - secretName: chart-example-tls
+  #    hosts:
+  #      - chart-example.local
 
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious
@@ -72,10 +83,3 @@ affinity: {}
 
 elasticsearch:
   replicas: 1
-
-kafka:
-  controller:
-    replicaCount: 1
-  listeners:
-    client:
-      protocol: "PLAINTEXT"
