@@ -7,3 +7,4 @@ This repository store charts for Price Comparer Application. Price Comparer app 
 
 # Releases
 You can see all available releases by clicking on releases tab.
+ 
