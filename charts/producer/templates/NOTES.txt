@@ -1,9 +1,9 @@
-{{- if .Values.consumer.ingress.enabled }}
-{{- range $host := .Values.consumer.ingress.hosts }}
-  {{- range .paths }}
-  Go to the application by this URL: http{{ if $.Values.consumer.ingress.tls }}s{{ end }}://{{ $host.host }}{{ . }}products
-  {{- end }}
-{{- end }}
-{{- else }}
-  You have to change value for consumer.ingress.enabled in values.yaml on true to be able to have access to the application.
-{{- end }}
+1. Get the application URL by running these commands:
+    NOTE: It may take a few minutes for the LoadBalancer IP to be available.
+    You can watch the status of by running 'kubectl get --namespace {{ .Release.Namespace }} svc -w {{ include "producer.fullname" . }}'
+
+    You need to remember to run command to expose application in new terminal:
+
+    "minikube tunnel"
+
+    echo http://localhost:{{ .Values.consumer.service.port }}/products
