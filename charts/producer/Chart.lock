@@ -4,6 +4,6 @@ dependencies:
   version: 12.9.0
 - name: consumer
   repository: https://martinmartinni.github.io/price-comparer-charts
-  version: 0.1.0
-digest: sha256:0c9102509fa3f9397d72974bd3f1c5b939db194f2110972e1c5402e1b23a1bbe
-generated: "2023-08-29T08:02:43.9977853+02:00"
+  version: 1.1.0
+digest: sha256:55e9ccfde7ba7a83ef8551c2a71b51e1e091feb0a81ad784ec147e33fc1ee184
+generated: "2023-08-28T19:06:59.861116+02:00"
